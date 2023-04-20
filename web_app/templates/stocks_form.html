@@ -1,0 +1,23 @@
+
+{% extends "bootstrap_5_layout.html" %}
+{% set active_page = "stocks_form" %}
+
+{% block content %}
+
+    <h2>Stocks Form</h2>
+
+    <form action="/stocks/dashboard" method="POST">
+        <label>Stock:</label>
+        <select id="my-stock-selector" name="symbol">
+            <option value="MSFT" selected>Microsoft (MSFT)</option>
+            <option value="GOOG">Google (GOOGL)</option>
+            <option value="AAPL">Apple (AAPL)</option>
+            <option value="TSLA">Tesla (TSLA)</option>
+            <option value="NFLX">Netflix (NFLX)</option>
+        </select>
+        <br>
+
+        <button id="my-submit-btn" class="btn btn-primary">Go!</button>
+    </form>
+
+{% endblock %}
